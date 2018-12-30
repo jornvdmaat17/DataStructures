@@ -32,6 +32,7 @@ int Stack::pop(){
   size--;
   return ret;
 }
+
 int Stack::returnSize(){
   return this->size;
 }
