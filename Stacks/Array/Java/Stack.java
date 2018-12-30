@@ -22,8 +22,11 @@ class Stack{
   }
 
   public int pop(){
-    int ret = this.stack[this.size - 1];
-    size--;
+    int ret = -1;
+    if(this.size != 0){
+      ret = this.stack[this.size - 1];
+      size--;
+    }
     if(this.size < this.capacity / 4){
       this.capacity/=2;
       int[] nS = new int[this.capacity];
