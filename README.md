@@ -9,5 +9,6 @@ This repository holds different datstructures in mostly C, C++ and Java.
 
 ### TODO
 
-<li>
-<li>
+<li> Binarytrees
+<li> HashSet
+<li> HashTable
