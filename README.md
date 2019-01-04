@@ -11,4 +11,4 @@ This repository holds different datstructures in mostly C, C++ and Java.
 
 <li> Binarytrees
 <li> HashSet
-<li> HashTable
+<li> HashMap
