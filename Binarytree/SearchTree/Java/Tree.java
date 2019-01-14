@@ -34,8 +34,6 @@ class Tree {
       current.left = addRec(current.left, data);
     }else if(data > current.data){
       current.right = addRec(current.right, data);
-    }else{
-      return current;
     }
     return current;
   }

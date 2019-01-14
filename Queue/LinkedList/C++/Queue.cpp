@@ -35,13 +35,3 @@ int Queue::dequeue(){
   this->head = this->head->next;
   return ret->data;
 }
-
-int main(){
-  Queue q;
-  q.enqueue(7);
-  q.enqueue(8);
-  std::cout << q.dequeue() << std::endl;
-  q.enqueue(9);
-  std::cout << q.dequeue() << std::endl;
-  return 0;
-}
