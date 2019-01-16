@@ -1,13 +1,13 @@
-class CLL{
+class CLL<T>{
 
     private class Node{
 
-        int value;
+        T value;
         Node next;
 
-        public Node(int value){
+        public Node(T value){
             this.value = value;
-            this.next = next;
+            this.next = null;
         }
     }
 
@@ -20,22 +20,21 @@ class CLL{
         size = 0;
     }
 
-    public void insertFirst(int value){        
+    public void insertFirst(T value){        
         Node newNode = new Node(value);
         if(head == null){
             head = newNode;
             tail = newNode;
             newNode.next = head;
         }else{
-            Node temp = head;
-            newNode.next = temp;
+            newNode.next = head;
             head = newNode;
             tail.next = head;
         }
         size++;      
     }
 
-    public void insertLast(int value){
+    public void insertLast(T value){
         if(head == null){
             insertFirst(value);
         }else{
@@ -53,7 +52,7 @@ class CLL{
         }
         head = head.next;
         tail.next = head;
-        size++;      
+        size--; 
     }
 
     public void printList(){
@@ -70,14 +69,5 @@ class CLL{
 
     public int getSize(){
         return size;
-    }      
-
-    public static void main(String[] args) {
-        CLL l = new CLL();
-        l.insertFirst(1);
-        l.insertFirst(0);
-        l.insertLast(2);
-        l.printList();
-    }
-
+    }   
 }

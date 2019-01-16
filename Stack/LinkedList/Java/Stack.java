@@ -1,4 +1,4 @@
-class Stack{
+class Stack<T>{
 
   private Element head;
   private int size;
@@ -8,7 +8,7 @@ class Stack{
     this.size = 0;
   }
 
-  public void push(int data){
+  public void push(T data){
     Element newE;
     if(head == null){
       newE = new Element(data, null);
@@ -19,11 +19,11 @@ class Stack{
     this.size++;
   }
 
-  public int pop(){
+  public T pop(){
       if(head == null){
-        return -1;
+        return null;
       }
-      int ret = this.head.data;
+      T ret = this.head.data;
       this.head = this.head.prev;
       this.size--;
       return ret;
@@ -36,16 +36,16 @@ class Stack{
   public boolean isEmpty(){
     return this.size == 0;
   }
-}
 
-class Element{
 
-  int data;
-  Element prev;
+  private class Element{
 
-  public Element(int data, Element prev){
-    this.data = data;
-    this.prev = prev;
+    T data;
+    Element prev;
+
+    public Element(T data, Element prev){
+      this.data = data;
+      this.prev = prev;
+    }
   }
-
 }

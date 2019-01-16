@@ -1,12 +1,12 @@
-class DLL{
+class DLL<T>{
 
     private class Node{
 
-        int value;
+        T value;
         Node prev;
         Node next;
 
-        public Node(int value, Node prev, Node next){
+        public Node(T value, Node prev, Node next){
             this.value = value;
             this.prev = prev;
             this.next = next;
@@ -22,7 +22,7 @@ class DLL{
         size = 0;
     }
 
-    public void insertFirst(int value){
+    public void insertFirst(T value){
         Node newNode = new Node(value, null, head);
         if(head == null){
             tail = newNode;
@@ -33,7 +33,7 @@ class DLL{
         size++;
     }
 
-    public void insertLast(int value){  
+    public void insertLast(T value){  
         Node newNode = new Node(value, tail, null);
         if(tail == null){
             head = newNode;
@@ -44,7 +44,7 @@ class DLL{
         size++;
     }
 
-    public void insertAtPos(int value, int pos){
+    public void insertAtPos(T value, int pos){
         if(pos <= 1){
             insertFirst(value);
             return;

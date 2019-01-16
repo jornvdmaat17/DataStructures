@@ -8,6 +8,7 @@ public:
   Element* prev;
 
   Element(int data, Element* prev);
+  Element() = default;
 };
 
 class Stack{

@@ -8,6 +8,7 @@ public:
   Node *next;
 
   Node(int data, Node *next);
+  Node() = default;
 };
 
 class Queue{

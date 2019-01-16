@@ -12,7 +12,7 @@ Stack::Stack(){
 }
 
 void Stack::push(int data){
-  Element *newE = (Element*) malloc(sizeof(Element));
+  Element *newE = new Element;
   if(this->head == nullptr){
     newE->prev = nullptr;
   }else{

@@ -1,4 +1,4 @@
-class Queue{
+class Queue<T>{
 
   Node head;
   Node tail;
@@ -8,7 +8,7 @@ class Queue{
     this.tail = null;
   }
 
-  public void enqueue(int data){
+  public void enqueue(T data){
     Node newN = new Node(data, null);
     if(head == null){
       head = tail = newN;
@@ -18,24 +18,24 @@ class Queue{
     }
   }
 
-  public int dequeue(){
+  public T dequeue(){
     Node ret = head;
     if(head == null){
       tail = null;
-      return -1;
+      return null;
     }
     head = head.next;
     return ret.data;
   }
-}
 
-class Node{
+  private class Node{
 
-  int data;
-  Node next;
+    T data;
+    Node next;
 
-  public Node(int data, Node next){
-    this.data = data;
-    this.next = next;
+    public Node(T data, Node next){
+      this.data = data;
+      this.next = next;
+    }
   }
 }

@@ -1,11 +1,11 @@
-class SSL{
+class SSL<T>{
 
     private class Node{
         
-        int value;
+        T value;
         Node next;
 
-        public Node(int value, Node next){
+        public Node(T value, Node next){
             this.value = value;
             this.next = next;        
         }
@@ -17,7 +17,7 @@ class SSL{
         head = null;
     }
 
-    public void insert(int value){        
+    public void insert(T value){        
         Node newNode = new Node(value, head);
         head = newNode;        
     }
@@ -26,7 +26,7 @@ class SSL{
         head = head.next;
     }
 
-    public boolean contains(int value){
+    public boolean contains(T value){
         Node current = head;
         while(current != null){
             if(current.value == value){

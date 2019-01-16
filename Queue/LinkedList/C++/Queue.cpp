@@ -13,7 +13,7 @@ Queue::Queue(){
 }
 
 void Queue::enqueue(int data){
-  Node *newN= (Node*) malloc(sizeof(Node));
+  Node *newN= new Node;
   newN->data = data;
   newN->next = nullptr;
   if(this->head == nullptr){
@@ -22,7 +22,6 @@ void Queue::enqueue(int data){
     this->tail->next = newN;
     this->tail = newN;
   }
-
 }
 
 int Queue::dequeue(){
@@ -30,8 +29,7 @@ int Queue::dequeue(){
     this->tail = nullptr;
     return -1;
   }
-  // printf("%d\n", this->head->data);
-  Node *ret = this->head;
+  int ret = this->head->data;
   this->head = this->head->next;
-  return ret->data;
+  return ret;
 }
