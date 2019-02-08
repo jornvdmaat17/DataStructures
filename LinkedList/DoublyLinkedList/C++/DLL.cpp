@@ -139,9 +139,3 @@ class DLL {
             size--;
         }
 };
-
-int main(){
-    DLL l = DLL();
-    return 0;
-}
-    
